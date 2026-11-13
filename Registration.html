@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Course Registration Lab</title></head>
+<body style="font-family:Arial;max-width:520px;margin:40px auto">
+<h2>University Course Registration</h2>
+<form id="f">
+  <p><label>Name <input id="name"></label></p>
+  <p><label>Email <input id="email" type="email"></label></p>
+  <p><label>Course
+    <select id="course">
+      <option value="">Choose course</option>
+      <option value="WEB101">Web Development</option>
+      <option value="SE101">Software Engineering</option>
+      <option value="ST101">Software Testing</option>
+    </select>
+  </label></p>
+  <button>Register</button>
+</form>
+<p id="result"></p>
+<script>
+const registrations = [{email:"existing@gmail.com",course:"WEB101"}];
+const capacity = {WEB101:2, SE101:30, ST101:30};
+document.getElementById("f").addEventListener("submit", e => {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const course = document.getElementById("course").value;
+  const result = document.getElementById("result");
+  if (!name || !email || !course) {
+    result.textContent = "Please complete all fields."; return;
+  }
+  if (!email.includes("@")) {
+    result.textContent = "Invalid email address."; return;
+  }
+  if (registrations.filter(r => r.course === course).length >= capacity[course]) {
+    result.textContent = "Course is full."; return;
+  }
+  registrations.push({email,course});
+  result.textContent = "Registration successful for " + name;
+});
+</script>
+</body>
+</html>
