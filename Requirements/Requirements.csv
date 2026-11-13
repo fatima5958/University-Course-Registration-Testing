@@ -1,0 +1,7 @@
+ID,Requirement,Priority,Risk,Clarification Needed
+R01,Student must enter a full name.,high,medium,no
+R02,Student must provide a valid email address.,high,high,no
+R03,Student must select a course.,medium,,
+R04,A course must not exceed 30 registered students.,high,high,no
+R05,A student must not register for the same course twice.,high,high,no
+R06,The system must display a registration confirmation.,medium,medium,no

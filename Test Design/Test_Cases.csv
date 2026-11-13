@@ -1,0 +1,9 @@
+Test ID,Requirement ID,Steps / Test Data,Expected Result,Actual Result,Pass/Fail
+TC01,"R01, R02, R03, R06",1. Enter Ali Khan. 2. Enter ali@example.com. 3. Select Software Testing. 4. Click Register.,Registration successful; confirmation displayed.,Registration is successful and Message Displayed,Pass
+TC02,R01,1. Leave name blank. 2. Enter valid email. 3. Select course. 4. Click Register.,Submission rejected.,Submission Rejected.Message Displays to fill all fields,Pass
+TC03,R02,1. Enter name. 2. Leave email blank. 3. Select course. 4. Click Register.,Submission rejected.,Submission Rejected.Message Displays to fill all fields,Pass
+TC04,R02,"Enter valid name, email ali-at-mail, select course, and click Register.",Invalid email rejected.,Invalid email message displays,Pass
+TC05,R03,Enter valid name and email. Leave course unselected. Click Register.,Submission rejected.,Submission Rejected.Message Displays to fill all fields,Pass
+TC06,R05,Register the same email twice for Software Engineering.,Second registration rejected.,Second Registration also proceed,Fail
+TC07,R04,"Fill Web Development to capacity, then attempt another registration.",Registration rejected; course is full.,Registration is rejected and Course is Full.,Pass
+TC08,"R04, R06","Refresh application. Register one student for Web Development, then attempt another registration.",First accepted; second rejected.,First Registration Successful and second shows the message of the course is full,Pass

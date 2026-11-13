@@ -1,0 +1,7 @@
+Requirement ID,Requirement Description,Test Case IDs,Coverage Status
+R01,Student must enter a full name.,"TC01, TC02",Covered
+R02,Student must provide a valid email address.,"TC01, TC03, TC04",Covered
+R03,Student must select a course.,"TC01, TC05",Covered
+R04,A course must not exceed 30 registered students.,"TC07, TC08",Covered (simulated capacity)
+R05,A student must not register for the same course twice.,TC06,Covered
+R06,The system must display a registration confirmation.,"TC01, TC08",Covered
